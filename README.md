@@ -25,10 +25,6 @@ Upload your resume, paste a job listing (or link), and choose what you want: a t
 AI Job Helper Analyzer is a fully functional web app with a completed frontend and dynamic resume-job matching system.  
 It includes job listing parsing, resume uploads, content tailoring tools, and scoring logic. AI integration (OpenAI API) and backend enhancements are planned to expand its capabilities.
 
-## 📷 Screenshots
-
-Coming soon...
-
 ## 📁 How to Use
 
 1. Open the homepage and upload your resume  
