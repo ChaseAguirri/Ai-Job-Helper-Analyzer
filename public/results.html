@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Job Assistant - Results</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="loadingOverlay" style="
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 9999;
+  ">
+    <div class="spinner" style="
+      width: 40px;
+      height: 40px;
+      border: 5px solid #ccc;
+      border-top: 5px solid #007bff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 1rem;
+    "></div>
+    <div>Loading analysis...<br>Please be patient...</div>
+  </div>
+  
+
+  <div class="container results-container">
+    <h1>AI Job Assistant - Results</h1>
+
+    <div class="info-row">
+      <div><strong>Job Title:</strong> <span id="jobTitle">Loading...</span></div>
+      <div><strong>Resume File:</strong> <span id="resumeFile">Loading...</span></div>
+    </div>
+
+    <section class="section-box">
+      <h2>Job Listing</h2>
+      <textarea id="jobListing" readonly placeholder="Job listing will appear here..."></textarea>
+    </section>
+
+    <section class="section-box">
+      <h2>Job Summary</h2>
+      <textarea id="resumeSummary" readonly placeholder="Resume summary will appear here..."></textarea>
+    </section>
+
+    <section class="options-selected">
+      <strong>Options Selected:</strong>
+      <ul id="optionsList">
+        <!-- Options will be populated here -->
+      </ul>
+    </section>
+
+    <section class="analysis-results">
+      <h2>Analysis Results</h2>
+      <p><strong>Requirements Matched:</strong> <span id="reqMatched">--%</span></p>
+      <p><strong>Resume Quality Score:</strong> <span id="resumeScore">--/100</span></p>
+
+      <h3>Comparison</h3>
+      <table id="comparisonTable">
+        <thead>
+          <tr>
+            <th>Job Requirement</th>
+            <th>Your Resume</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows inserted here -->
+        </tbody>
+      </table>
+
+      <h3>Suggestions</h3>
+      <ul id="suggestionsList">
+        <!-- Suggestions inserted here -->
+      </ul>
+    </section>
+
+    <!-- Dynamic AI-generated sections -->
+    <div id="dynamicSections"></div>
+
+    <div class="buttons-row">
+      <button id="backBtn">Back to Home</button>
+      <button id="downloadReportBtn">Download Report</button>
+    </div>
+  </div>
+
+  <script src="results.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Job Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Error popup container -->
+    <div id="errorContainer" class="error-container"></div>
+
+    <h1>AI Job Assistant</h1>
+
+    <!-- Resume Upload -->
+    <label for="resume-upload">Upload Your Resume (PDF only):</label>
+    <input type="file" id="resume-upload" accept=".pdf" />
+
+    <!-- Job Listing -->
+    <label for="job-listing">Paste Job Listing Details:</label>
+    <textarea id="job-listing" placeholder="Copy the full job information here..."></textarea>
+
+    <!-- Optional Add-ons -->
+    <label>Extra Options:</label>
+    <div class="options">
+      <label><input type="checkbox" id="tailor-resume" /> Tailor Resume</label>
+      <label><input type="checkbox" id="write-cover" /> Write Cover Letter</label>
+      <label><input type="checkbox" id="generate-summary" /> Generate Job Summary</label>
+    </div>
+
+    <div id="loadingContainer" style="display:none; margin-bottom: 1em;">
+      <label for="loadingBar">Processing:</label>
+      <progress id="loadingBar" value="0" max="100" style="width: 100%;"></progress>
+      <div id="loadingText" style="text-align: center; margin-top: 0.5em;">0%</div>
+    </div>
+  
+    <!-- Submit -->
+    <button id="generateBtn">Generate</button>
+
+    <!-- Info Tip -->
+    <div class="tip">
+      Need Help? Click <span class="tip-toggle" style="cursor:pointer; color:blue; text-decoration:underline;">HERE</span> to open instructional menu!
+    </div>
+
+    <!-- Modal popup -->
+    <div class="modal hidden" id="instructionModal" style="position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); display:flex; justify-content:center; align-items:center;">
+      <div class="modal-content" style="background:#fff; padding:20px; border-radius:8px; max-width:400px; width:90%; position:relative;">
+        <button class="modal-close" id="modalCloseBtn" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+        <h3>How to Use:</h3>
+        <ul>
+          <li><strong>Upload Resume:</strong> Add your most recent resume (PDF only).</li>
+          <li><strong>Paste Job Listing:</strong> Paste the full job description, requirements, and any important additional information.</li>
+          <li><strong>Optional Features:</strong> Select what you want:
+            <ul>
+              <li><em>Tailor Resume</em>: Get your resume adapted for this job.</li>
+              <li><em>Write Cover Letter</em>: Auto-generate a cover letter using your resume + job info.</li>
+              <li><em>Generate Summary</em>: A brief summary to understand the job better.</li>
+            </ul>
+          </li>
+          <li><strong>Click Generate:</strong> The assistant will return personalized output for you.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+/* Base reset and font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+  }
+  
+  /* Container styling */
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Title */
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Section label */
+  label {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  /* Inputs */
+  input[type="file"],
+  textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #f3f4f6;
+    box-sizing: border-box;
+  }
+  
+  /* Textarea sizing */
+  textarea {
+    min-height: 160px;
+    resize: vertical;
+  }
+  
+  /* Buttons */
+  button {
+    margin-top: 1.75rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Checkbox group */
+  .options {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+  }
+  
+  /* Info tip container */
+  .tip {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+  }
+  
+  /* Hidden class to toggle visibility */
+  .hidden {
+    display: none !important;
+  }
+  
+  
+  /* Modal backdrop */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal content box */
+  .modal-content {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* Close (X) button styling */
+  .modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s ease;
+  }
+  
+  .modal-close:hover {
+    color: #000;
+  }
+  
+  /* Make "HERE" text look clickable */
+  .tip-toggle {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .tip-toggle:hover {
+    color: #0056b3;
+  }
+
+  /* ===== Styles for Results Page ===== */
+
+  /* ===== Styles for Results Page ===== */
+
+.results-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #1f2937;
+  }
+  
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-box {
+    margin-bottom: 2rem;
+  }
+  
+  .section-box h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: #f3f4f6;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  
+  .options-selected {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .options-selected ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .analysis-results {
+    font-size: 1rem;
+  }
+  
+  .analysis-results p {
+    margin: 0.5rem 0;
+  }
+  
+  .analysis-results h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  table th,
+  table td {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #d1d5db;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #e5e7eb;
+    font-weight: 600;
+  }
+  
+  .buttons-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .buttons-row button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex: 1;
+  }
+  
+  .buttons-row button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Make dynamic sections stack nicely */
+#dynamicSections {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Each added section styling */
+  .option-section {
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    padding: 1.25rem 1.75rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .option-section h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: #1e40af;
+    margin-bottom: 0.75rem;
+  }
+  
+  .option-section p {
+    margin: 0;
+    font-size: 1rem;
+    color: #374151;
+  }
+  .output-box pre {
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+  .option-section pre {
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  /* Error popup container */
+#errorContainer {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4c4c; /* bright red */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 10000;
+    max-width: 90vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+  }
+  
+  /* Show the error popup */
+  #errorContainer.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  #loadingOverlay {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  #loadingOverlay.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
